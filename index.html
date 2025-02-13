@@ -1,4 +1,4 @@
-<!-- Updated index.html with correct filtering for multi-select Category & Sub-category -->
+<!-- Updated index.html with correct multi-select filtering for Category & Sub-category -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -88,12 +88,12 @@
       const tableBody = document.querySelector('#questionsTable tbody');
       tableBody.innerHTML = filteredData.map(item => `
         <tr>
-          <td>${item.Question}</td>
-          <td>${item.QuestionType}</td>
-          <td>${item.Category}</td>
-          <td>${item.SubCategory}</td>
-          <td>${item.Recommended}</td>
-          <td>${item.QuestionResponse}</td>
+          <td>${item.Question || 'N/A'}</td>
+          <td>${item.QuestionType || 'N/A'}</td>
+          <td>${item.Category || 'N/A'}</td>
+          <td>${item.SubCategory || 'N/A'}</td>
+          <td>${item.Recommended || 'N/A'}</td>
+          <td>${item.QuestionResponse || 'N/A'}</td>
         </tr>
       `).join('');
     }
