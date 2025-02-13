@@ -1,111 +1,79 @@
-<!-- Fully fixed index.html with correct multi-select filtering for Category & Sub-category -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Survey Filter Tool</title>
-  <link rel="stylesheet" href="styles.css">
-  
-  <!-- Include jQuery (required for Select2) -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  
-  <!-- Include XLSX.js for Excel processing -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>
-  
-  <!-- Include Select2 for multi-select dropdowns -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey filter tool</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
+    
+    <!-- Scripts - Note the order is important -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 </head>
 <body>
-  <h1>Survey Filter Tool</h1>
-  
-  <!-- Filter Section with Improved Layout -->
-  <div class="filters">
-    <div class="filter-row">
-      <label>Category: <select id="categorySelect" multiple></select></label>
-      <label>Sub-category: <select id="subCategorySelect" multiple></select></label>
+    <h1>Survey filter tool</h1>
+    
+    <div class="filters">
+        <div class="filter-row">
+            <div class="filter-group">
+                <label for="categorySelect">Category:</label>
+                <select id="categorySelect" multiple>
+                    <option value="">Loading categories...</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="subCategorySelect">Sub-category:</label>
+                <select id="subCategorySelect" multiple>
+                    <option value="">Loading sub-categories...</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="filter-row">
+            <div class="filter-group">
+                <label for="questionTypeSelect">Question type:</label>
+                <select id="questionTypeSelect">
+                    <option value="">All types</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="recommendedSelect">Recommended for strive:</label>
+                <select id="recommendedSelect">
+                    <option value="">All</option>
+                    <option value="Recommended">Recommended</option>
+                    <option value="Required">Required</option>
+                </select>
+            </div>
+        </div>
+        
+        <button id="clearFiltersBtn" class="clear-filters">Clear filters</button>
     </div>
-    <div class="filter-row">
-      <label>Question Type: <select id="questionTypeSelect"></select></label>
-      <label>Recommended for Strive: <select id="recommendedSelect"></select></label>
+
+    <div class="table-container">
+        <table id="questionsTable">
+            <thead>
+                <tr>
+                    <th>Question</th>
+                    <th>Type</th>
+                    <th>Category</th>
+                    <th>Sub-category</th>
+                    <th>Recommended</th>
+                    <th>Response options</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table content will be dynamically populated -->
+            </tbody>
+        </table>
     </div>
-    <button id="clearFiltersBtn">Clear Filters</button>
-  </div>
 
-  <!-- Table Section -->
-  <table id="questionsTable">
-    <thead>
-      <tr>
-        <th>Question</th>
-        <th>Type</th>
-        <th>Category</th>
-        <th>Sub-category</th>
-        <th>Recommended</th>
-        <th>Response Options</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      $("#categorySelect, #subCategorySelect").select2({
-        placeholder: "Select options",
-        allowClear: true,
-        width: '100%'
-      });
-      $("#questionTypeSelect, #recommendedSelect").select2({
-        minimumResultsForSearch: -1,
-        width: '100%'
-      });
-    });
-
-    function populateSelect(selectElem, values) {
-      selectElem.innerHTML = '<option value="">All</option>' + values.map(value => `<option value="${value}">${value}</option>`).join('');
-    }
-
-    function getUniqueValues(data, key) {
-      const allValues = data.flatMap(item => 
-        item[key] ? item[key].split(',').map(val => val.trim()) : []
-      );
-      return [...new Set(allValues)];
-    }
-
-    function filterData(data) {
-      const selectedCategories = $("#categorySelect").val() || [];
-      const selectedSubCategories = $("#subCategorySelect").val() || [];
-      
-      return data.filter(item => (
-        (selectedCategories.length === 0 || selectedCategories.some(cat => item.Category?.split(',').map(c => c.trim()).includes(cat))) &&
-        (selectedSubCategories.length === 0 || selectedSubCategories.some(sub => item.SubCategory?.split(',').map(s => s.trim()).includes(sub))) &&
-        (!$("#questionTypeSelect").val() || item.QuestionType === $("#questionTypeSelect").val()) &&
-        (!$("#recommendedSelect").val() || item.Recommended === $("#recommendedSelect").val())
-      ));
-    }
-
-    function updateTable(filteredData) {
-      const tableBody = document.querySelector('#questionsTable tbody');
-      tableBody.innerHTML = filteredData.map(item => `
-        <tr>
-          <td>${item.Question}</td>
-          <td>${item.QuestionType}</td>
-          <td>${item.Category}</td>
-          <td>${item.SubCategory}</td>
-          <td>${item.Recommended}</td>
-          <td>${item.QuestionResponse}</td>
-        </tr>
-      `).join('');
-    }
-
-    $("#categorySelect, #subCategorySelect, #questionTypeSelect, #recommendedSelect").on("change", function() {
-      fetchExcel().then(data => {
-        updateTable(filterData(data));
-      });
-    });
-  </script>
-
-  <!-- Include the main app.js script -->
-  <script src="app.js"></script>
+    <!-- Load our application code last -->
+    <script src="app.js"></script>
 </body>
 </html>
