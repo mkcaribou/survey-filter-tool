@@ -1,0 +1,58 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Survey Filter Tool</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Survey Question Filter Tool</h1>
+  
+  <!-- Filters Section -->
+  <div class="filters">
+    <label>Category:
+      <select id="categorySelect">
+        <option value="">All</option>
+      </select>
+    </label>
+
+    <label>Sub-category:
+      <select id="subCategorySelect">
+        <option value="">All</option>
+      </select>
+    </label>
+
+    <label>Question Type:
+      <select id="questionTypeSelect">
+        <option value="">All</option>
+      </select>
+    </label>
+
+    <label>Recommended for Strive:
+      <select id="recommendedSelect">
+        <option value="">All</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </label>
+
+    <button id="clearFiltersBtn">Clear Filters</button>
+  </div>
+
+  <!-- Table Section -->
+  <table id="questionsTable">
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>Category</th>
+        <th>Sub-category</th>
+        <th>Type</th>
+        <th>Recommended?</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,1115 @@
+[
+    {
+        "Question":"[Upskilling course] contents are relevant to me.",
+        "QuestionType":"Single choice",
+        "Category":"Feedback",
+        "SubCategory":"Feedback",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"In the last 6 months, have you used any services from [Company]?",
+        "QuestionType":"Multiple-choice",
+        "Category":"Feedback",
+        "SubCategory":"Type of intervention\/attribution",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Have you experienced any challenges with [Company]? (SS)",
+        "QuestionType":"Single choice",
+        "Category":"Feedback",
+        "SubCategory":"Feedback",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"What was your challenge with [Company]? (OE)",
+        "QuestionType":"Open-ended",
+        "Category":"Feedback",
+        "SubCategory":"Feedback",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Since this time [XX] year, how has the number of customers or sales changed?",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Growth & work opportunities",
+        "SubCategory":"Market size\/access",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Since this time [XX] year, have you introduced new products or services to offer your customers?",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Growth & work opportunities",
+        "SubCategory":"Expand product\/service line",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"In the last 6 months, has your business product(s)quality or services improved?",
+        "QuestionType":"Multiple-choice",
+        "Category":"Growth & work opportunities",
+        "SubCategory":"Other growth",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Which of the following are the impacts from the[XXX] program that makes you feel more optimistic in your business ability to survive in the event of external negative shocks such as a market downturn or a health crisis.",
+        "QuestionType":"Multiple-choice",
+        "Category":"Growth & work opportunities, Resilience",
+        "SubCategory":"Market size\/access, Other growth, Revenue",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Since using [Company] [product\/service], have the profits you earn from your business grown?",
+        "QuestionType":"Single choice",
+        "Category":"Growth & work opportunities",
+        "SubCategory":"Profits",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Please provide an estimate of your business's revenue over the following time periods.",
+        "QuestionType":"Matrix",
+        "Category":"Growth & work opportunities",
+        "SubCategory":"Revenue",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"In the past [XX] months, have you suffered any kind of shock that reduced your business revenue?",
+        "QuestionType":"Single choice",
+        "Category":"Resilience",
+        "SubCategory":"Shocks",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"How long did the impact of the shock last?",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Resilience",
+        "SubCategory":"Resilience outcomes",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"How long did the shock last?",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Resilience",
+        "SubCategory":"Resilience outcomes",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"What measure helped you cope the most with this shock?",
+        "QuestionType":"Single choice",
+        "Category":"Resilience",
+        "SubCategory":"Coping mechanisms",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"What was the nature of the shock?",
+        "QuestionType":"Multiple-choice",
+        "Category":"Resilience",
+        "SubCategory":"Shocks",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Imagine an emergency where you need a lump sum amounting to a month\u2019s business revenue. How difficult would it be to come up with the equivalent of 1 month\u2019s revenue?",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Resilience",
+        "SubCategory":"Coping mechanisms",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"On a scale of 1 to 5, where 1 means VERY PESSIMISTIC: I believe my business will fail soon and 5 means VERY OPTIMISTIC: I am confident that my business will thrive and grow, how optimistic are you about the future of your business? ",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Resilience",
+        "SubCategory":"Resilience outcomes",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Imagine tomorrow that your business has an unexpected emergency and needs to come up with 51,000 Czech Koruna within the next month. What would be your primary option for coming up with the money? ",
+        "QuestionType":"Multiple-choice",
+        "Category":"Resilience",
+        "SubCategory":"Coping mechanisms",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"In the last [XX] months, have you adopted any new strategies to cope with potential business shocks?",
+        "QuestionType":"Single choice",
+        "Category":"Resilience",
+        "SubCategory":"Coping mechanisms",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"In the last [XX] months, has the number of sources you can access funds from within a week increased? ",
+        "QuestionType":"Single choice",
+        "Category":"Resilience",
+        "SubCategory":"Coping mechanisms",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"How has the use of digital technologies improved your overall business efficiency? ",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Efficiency",
+        "SubCategory":"Cost savings, Time savings",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"In the last 12 months, have you been able to reduce business costs by adopting new practices or products\/services",
+        "QuestionType":"Single choice",
+        "Category":"Efficiency",
+        "SubCategory":"Cost savings",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"In the last 12 months, have you been able to save time in your business by adopting new practices or products\/services?",
+        "QuestionType":"Single choice",
+        "Category":"Efficiency",
+        "SubCategory":"Time savings",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"How confident are you in your ability to effectively utilize technology to enhance your business operations? Are you\u2026",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Capabilities",
+        "SubCategory":"Digital and operational capabilities",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Has your network of fellow business owners expanded since participating in the program\/ in the last [XX] months?",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Capabilities, Resilience",
+        "SubCategory":"Psychosocial capabilities",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"How regularly does your business set aside funds or resources as a buffer to cope with unexpected expenses or downturns?",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Adoption of business practices, Capabilities, Resilience",
+        "SubCategory":"Financial capabilities, Financial management",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"How would you rate your overall business (marketing\/finance\/people) capabilities for managing and growing your current business right now?",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Capabilities",
+        "SubCategory":"Entrepreneurial and\/or business capabilities",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Has your ability to use digital tools that benefit your business [without consulting your spouse\/another adult] changed because of using digital platforms? Has it: (SS)",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Capabilities",
+        "SubCategory":"Digital and operational capabilities",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"How would you rate your overall business (marketing\/finance\/people) capabilities for managing and growing your current business \u2026",
+        "QuestionType":"Matrix",
+        "Category":"Capabilities",
+        "SubCategory":"Entrepreneurial and\/or business capabilities",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"How would you rate your capabilities in using digital tools to grow your business\u2026",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Capabilities",
+        "SubCategory":"Digital and operational capabilities",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"To what extent has your engagement with [XXX program or content] contributed to the changes in your management and digital capabilities over the past year?",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Capabilities",
+        "SubCategory":"Digital and operational capabilities",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"How do you feel about your business skills since joining [XXX program or network]?",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Capabilities",
+        "SubCategory":"Digital and operational capabilities, Entrepreneurial and\/or business capabilities, Financial capabilities, Psychosocial capabilities",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Which of the following business knowledge and skills areas do you see\/feel improvement on? SELECT ALL THAT APPLY",
+        "QuestionType":"Multiple-choice",
+        "Category":"Capabilities",
+        "SubCategory":"Entrepreneurial and\/or business capabilities, Financial capabilities",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"What digital tools or services (if any) does your business use? (Select all that apply)",
+        "QuestionType":"Multiple-choice",
+        "Category":"Adoption of products\/services",
+        "SubCategory":"Adoption of digital marketplaces, Credit adoption, DFS adoption, Digital tool adoption (general)",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Select all the following digital tools that are used for your business:",
+        "QuestionType":"Multiple-choice",
+        "Category":"Adoption of products\/services, Resilience",
+        "SubCategory":"Adoption of digital marketplaces, DFS adoption, Digital tool adoption (general)",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"What are the main challenges the business has faced in using digital technologies?\u00a0 ",
+        "QuestionType":"Multiple-choice",
+        "Category":"Adoption of products\/services",
+        "SubCategory":"Challenges with products\/services",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Please select all of the following practices that you have started doing in your business in the last [XXX time period] [select all that apply]",
+        "QuestionType":"Multiple-choice",
+        "Category":"Adoption of products\/services",
+        "SubCategory":"Adoption of digital marketplaces, DFS adoption",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"How has the usage of a [hardware] changed over the past 9 months, since [XXX joining\/participating in program]?",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Adoption of products\/services",
+        "SubCategory":"Digital tool adoption (general)",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Has your ability to use digital tools that benefit your business changed because of the [program]? Has it:",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Adoption of products\/services",
+        "SubCategory":"Digital tool adoption (general)",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Thinking about the technological\/digital tools you\u2019ve introduced to your business over the last 12 months, how much do you estimate this adoption has decreased your overheads (day-to-day business costs) by? ",
+        "QuestionType":"Single choice",
+        "Category":"Efficiency",
+        "SubCategory":"Cost savings",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Does this establishment have a line of credit or a loan from a financial institution?\u00a0",
+        "QuestionType":"Single choice",
+        "Category":"Adoption of products\/services",
+        "SubCategory":"Credit adoption",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"What was its value at the time of approval?\u00a0",
+        "QuestionType":"Numerical",
+        "Category":"Adoption of products\/services",
+        "SubCategory":"Credit adoption",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"In a typical month, which of the following electronic payment methods accounts for the largest proportion of this establishment\u2019s payments in value?\u00a0",
+        "QuestionType":"Single choice",
+        "Category":"Adoption of products\/services",
+        "SubCategory":"DFS adoption",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"How do you manage your business' finances? (Select all that apply)",
+        "QuestionType":"Multiple-choice",
+        "Category":"Adoption of products\/services",
+        "SubCategory":"DFS adoption",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"What payment methods does your business accept? (Select all that apply)",
+        "QuestionType":"Multiple-choice",
+        "Category":"Adoption of products\/services",
+        "SubCategory":"DFS adoption",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Which of the following does your business track meticulously? (i.e., there is a ledger or a notebook where transactions are noted down soon after they happen)",
+        "QuestionType":"Multiple-choice",
+        "Category":"Adoption of business practices, Resilience",
+        "SubCategory":"Record Keeping",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Over the [XX] months, did you have a written budget, which states how much is owed or should be spent each month on rent, electricity, equipment maintenance, transport, advertising, and other\nindirect costs to business?",
+        "QuestionType":"Single choice",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Financial management",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Over the last [ XX], did you keep track of every purchase\/expenditure (all money out) made by the business?",
+        "QuestionType":"Single choice",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Record Keeping",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Over the last [XX]  months, have you attempted to negotiate with a supplier\/vendor for a lower price on raw material\/stock\/inputs to your business?",
+        "QuestionType":"Single choice",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Adoption of business practices",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Over the last [XX] months, did you keep track of every sale made by the business (all money into the business)?",
+        "QuestionType":"Single choice",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Record Keeping",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Over the last [XX] months, did you know which goods, products, or services make the business the most profit per item selling?",
+        "QuestionType":"Single choice",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Record Keeping",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Over the last [XX] months, did you use records regularly to know whether sales of a particular product are increasing or decreasing from one month to another?",
+        "QuestionType":"Single choice",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Record Keeping",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Over the last [XX] months, have you ever attracted new customers with a special offer?",
+        "QuestionType":"Single choice",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Marketing",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Over the last [XX] months, have you made use of digital social media for marketing purposes? (e.g., Facebook, WhatsApp, Twitter, LinkedIn)",
+        "QuestionType":"Single choice",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Marketing",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Please select all of the following management practices that you have started doing in your business in the last 9 months [select all that apply]",
+        "QuestionType":"Multiple-choice",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Financial management",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Please select all of the following marketing practices that you have started doing in your business in the last [XX] months [select all that apply]",
+        "QuestionType":"Multiple-choice",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Marketing",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Over the last [XX time period], since watching  [XX Program\/Company] training content, have you tried to gather customer feedback through an app or website (list examples here)?",
+        "QuestionType":"Single choice",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Market research",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"How would you rate your business\u2019s use of technology in each of the following areas? Very good to very poor",
+        "QuestionType":"Matrix",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Financial management, HR practices, Marketing, Record Keeping",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Over fiscal year [Insert last complete fiscal year], did this establishment monitor any performance indicators?\u00a0",
+        "QuestionType":"Single choice",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Adoption of business practices",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"During the last [xx] months, has this establishment introduced new or improved products or services?\u00a0",
+        "QuestionType":"Single choice",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Adoption of business practices",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"How do you analyse your business' financial performance? ",
+        "QuestionType":"Multiple-choice",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Financial management",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"What does your business do to attract customers? (Select all that apply)",
+        "QuestionType":"Multiple-choice",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Marketing",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"How do you manage your business' online safety? (Select all that apply)",
+        "QuestionType":"Multiple-choice",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Cybersecurity practices",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"How do you protect your business\/customer data? (Select all that apply)",
+        "QuestionType":"Multiple-choice",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Cybersecurity practices",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"How do you manage relationships with your customers? (Select all that apply)",
+        "QuestionType":"Multiple-choice",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Adoption of business practices",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":" Do you own any of the following products or services or perform any of the following activities for your business?",
+        "QuestionType":"Multiple-choice",
+        "Category":"Adoption of business practices, Adoption of products\/services",
+        "SubCategory":"Adoption of business practices, Adoption of digital marketplaces, DFS adoption, Digital tool adoption (general), Financial management, HR practices",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Thinking about the way you run your business,  do you agree with the following statements? Please  indicate any of the following",
+        "QuestionType":"Multiple-choice",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Adoption of business practices, Financial management",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Has your approach to record-keeping changed since the [program]\/ in the past [XX] months?",
+        "QuestionType":"Single choice",
+        "Category":"Adoption of business practices, Resilience",
+        "SubCategory":"Record Keeping",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Can you mention where your business is located? (SS)",
+        "QuestionType":"Single choice",
+        "Category":"Business profile",
+        "SubCategory":"Demographic",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Excluding yourself, how many people performed paid work for this outlet in the last [XX] months?",
+        "QuestionType":"Open-ended",
+        "Category":"Business profile, Growth & work opportunities",
+        "SubCategory":"Work creation",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Who owns the business? Think of who runs it or is in charge of the business in terms of decision-making, management, etc. (SS)",
+        "QuestionType":"Single choice",
+        "Category":"Business profile",
+        "SubCategory":"Ownership",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"How long have you been running your business?",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Business profile",
+        "SubCategory":"Business Age",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Which of the following best describes your present role in your business?",
+        "QuestionType":"Single choice",
+        "Category":"Business profile",
+        "SubCategory":"Ownership",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"What is your gender?",
+        "QuestionType":"Single choice",
+        "Category":"Business profile",
+        "SubCategory":"Gender",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Who runs this business?",
+        "QuestionType":"Single choice",
+        "Category":"Business profile",
+        "SubCategory":"Gender",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Would you mind sharing the age of the business-owner\nwith me?",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Business profile",
+        "SubCategory":"Demographic",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Can you share approximately the annual revenue of your business? (in local currency)",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Business profile, Growth & work opportunities",
+        "SubCategory":"Revenue",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"During the past 12 months, what was the largest number of part-time, full-time, seasonal, and contract employees you had working for you at one time? Include family members if they were paid a wage.",
+        "QuestionType":"Open-ended",
+        "Category":"Business profile, Growth & work opportunities",
+        "SubCategory":"Work creation",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"How many of those people\nworked with you throughout\nthe entire year?",
+        "QuestionType":"Numerical",
+        "Category":"Business profile, Growth & work opportunities",
+        "SubCategory":"Work creation",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"How many of those people\nwere only employed during a\nseasonal period?",
+        "QuestionType":"Numerical",
+        "Category":"Business profile, Growth & work opportunities",
+        "SubCategory":"Work creation",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"How many employees\ncurrently work for you?\nInclude part-time, full-time,\nseasonal, and contract\nemployees as well as family\nmembers if they were paid a\nwage.",
+        "QuestionType":"Numerical",
+        "Category":"Business profile, Growth & work opportunities",
+        "SubCategory":"Work creation",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Please tell me which of the following you did IN THE LAST [XX] MONTHS: Purchased a new insurance plan",
+        "QuestionType":"Single choice",
+        "Category":"Adoption of products\/services",
+        "SubCategory":"DFS adoption, Insurance",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Please tell me which of the following you did IN THE LAST [XX] MONTHS: Used an insurance plan to cover an expense",
+        "QuestionType":"Single choice",
+        "Category":"Resilience",
+        "SubCategory":"Coping mechanisms",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"What is the primary\nindicator you use to tell\nhow your business is\ndoing?",
+        "QuestionType":"Single choice",
+        "Category":"Growth & work opportunities",
+        "SubCategory":"Other growth",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Compared to last year at\nthis time, has your\n[INSERT PREVIOUS ANSWER]\nincreased, decreased, or\nstayed the same?",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Growth & work opportunities",
+        "SubCategory":"Other growth",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"What is your best estimate for your profit during the past 12 months? That is, how much money did you earn after paying for all your business expenses, including paying yourself a salary.",
+        "QuestionType":"Numerical",
+        "Category":"Growth & work opportunities",
+        "SubCategory":"Profits",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Compared to last year at\nthis time, do you think\nyour profit has increased,\ndecreased, or stayed the\nsame?",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Growth & work opportunities",
+        "SubCategory":"Profits",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Has your business\nexperienced any\nfinancial challenges\nduring the past 12\nmonths? (Select all that\napply.)",
+        "QuestionType":"Multiple-choice",
+        "Category":"Resilience",
+        "SubCategory":"Shocks",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"What share of your\nhousehold's income\ncomes from your primary\nbusiness?",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Social and gender outcomes",
+        "SubCategory":"Household impacts",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Now, imagine that you have an emergency and you need to pay [insert 1\/20 of GNI per capita in local currency units]. What would be the MAIN source of money that you would use to come up\nwith [insert 1\/20 of GNI per capita in local currency units] within the NEXT 30 days? (Read Items)\n(Interviewer: If respondent says \"credit card,\" please code as \"borrowing from a bank, employer, or private lender.\")",
+        "QuestionType":"Single choice",
+        "Category":"Resilience",
+        "SubCategory":"Coping mechanisms",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Which of the following best describes your overall involvement in financial decisions of your household?",
+        "QuestionType":"Single choice",
+        "Category":"Social and gender outcomes",
+        "SubCategory":"WEE",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"There are many reasons why people don\u2019t have a bank account. Can you tell me why you don\u2019t have a bank account?",
+        "QuestionType":"Multiple-choice",
+        "Category":"Adoption of products\/services",
+        "SubCategory":"DFS adoption",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Aside  from [XX program], could you tell us if something else helped your business?",
+        "QuestionType":"Open-ended",
+        "Category":"Feedback",
+        "SubCategory":"Type of intervention\/attribution",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Have you noticed any changes in your ability to make decisions in the household and the community?",
+        "QuestionType":"Multiple-choice",
+        "Category":"Social and gender outcomes",
+        "SubCategory":"WEE",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"In which types of decisions are you more able to make decisions within your household or community?",
+        "QuestionType":"Open-ended",
+        "Category":"Social and gender outcomes",
+        "SubCategory":"WEE",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"How has your quality of life  improved?",
+        "QuestionType":"Open-ended",
+        "Category":"Social and gender outcomes",
+        "SubCategory":"WEE",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Please rank the following [XX program] features according to what is most useful to your business, 10 being the most valuable and 0 being the least valuable.",
+        "QuestionType":"Ranking",
+        "Category":"Feedback",
+        "SubCategory":"Feedback",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"To what extent do you agree or disagree with this statement: \u201c[XX company\u2019s] services have met my expectations.\u201d",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Feedback",
+        "SubCategory":"Feedback",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"To what extent do you agree or disagree with the following statement: \u201cI feel safe online using [XX company\u2019s] services \/ digital platforms and the internet e.g. free of harassment online?\u201d",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Feedback",
+        "SubCategory":"Feedback",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"By using the Likert scale 1\u20135 (Very   Decreasing\u2014Very Increasing), please fill in the changes in your business performance before and after using e-commerce for the indicators below:",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Efficiency",
+        "SubCategory":"Cost savings",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"By using the Likert scale 1\u20135 (Very\n  Decreasing\u2014Very Increasing), please fill in the changes in your business\n  performance before and after using e-commerce for the indicators below:",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Efficiency, Growth & work opportunities",
+        "SubCategory":"Market size\/access, Other growth, Revenue, Time savings",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Average Revenue per month:",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Business profile, Growth & work opportunities",
+        "SubCategory":"Revenue",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Rate your\n  knowledge of (or skill in) the course topic before the course.\u00a0",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Capabilities",
+        "SubCategory":"Digital and operational capabilities, Entrepreneurial and\/or business capabilities, Financial capabilities",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"What factors will keep you\n  from using the content of this course in your work? (Select all that\n  apply)\u00a0",
+        "QuestionType":"Multiple-choice",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Challenges with products\/services",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"How relevant is [this course] to your current work?\u00a0",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Feedback",
+        "SubCategory":"Feedback",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Rate your knowledge of (or skill in) the course topic now after the course.\u00a0",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Capabilities",
+        "SubCategory":"Digital and operational capabilities, Entrepreneurial and\/or business capabilities, Financial capabilities",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Which sector  best describes your business?",
+        "QuestionType":"Single choice",
+        "Category":"Business profile",
+        "SubCategory":"Business Sector",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"What  prevents you from using digital tools and services?",
+        "QuestionType":"Multiple-choice",
+        "Category":"Adoption of products\/services",
+        "SubCategory":"Challenges with products\/services",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"To what extent has [XX company or program] contributed to  your businesses' use of digital tools and services?",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Adoption of products\/services",
+        "SubCategory":"Digital tool adoption (general)",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Have you applied what you have learned to the\n  business?",
+        "QuestionType":"Single choice",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Adoption of business practices",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Has the number of paid employees working for\n  your business changed since engaging with [XX program\/company]?",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Growth & work opportunities",
+        "SubCategory":"Work creation",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Since engaging with [XX program\/company] has your ability to manage your finances changed?",
+        "QuestionType":"Matrix",
+        "Category":"Capabilities",
+        "SubCategory":"Financial capabilities",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Can you tell me roughly how much lower are the\n  sales from your business as compared to before engaging with [XX Program\/Company]?",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Growth & work opportunities",
+        "SubCategory":"Revenue",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Can you tell me roughly how much higher are the\n  sales from your business as compared to before engaging with  [XX Program\/Company]?",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Growth & work opportunities",
+        "SubCategory":"Revenue",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Have the sales from your business changed\n  because of the services that  [XX Program\/Company] has provided you? Have they:",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Growth & work opportunities",
+        "SubCategory":"Revenue",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"To what extent do you have complete control over\n  the following? Your business finances",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Social and gender outcomes",
+        "SubCategory":"WEE",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Who is the main financial decision maker in your\n  household? (SS)",
+        "QuestionType":"Single choice",
+        "Category":"Social and gender outcomes",
+        "SubCategory":"WEE",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Thinking about this loan repayment to [FSP], are\n  they: (SS)",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Adoption of products\/services",
+        "SubCategory":"Credit adoption",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"To what extent do you agree or disagree with\n  this statement? \u201c[XX Program\/Company] made it easy for me to handle any\n  issues\/challenges.\u201d Do you: (SS)",
+        "QuestionType":"Likert-scale\/Range",
+        "Category":"Capabilities",
+        "SubCategory":"Psychosocial capabilities",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"[If 9-10:] What specifically\n  about  [XX Program\/Company] would cause you to recommend it to a friend or\n  family member? (OE)",
+        "QuestionType":"Open-ended",
+        "Category":"Feedback",
+        "SubCategory":"Feedback",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"[If 7-8:] What specifically about  [XX Program\/Company] caused you to give\n  it the score that you did? (OE)\u00a0",
+        "QuestionType":"Open-ended",
+        "Category":"Feedback",
+        "SubCategory":"Feedback",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"[If 0-6:] What actions could  [XX Program\/Company] take to make you more\n  likely to recommend them to a friend or family member? (OE)",
+        "QuestionType":"Open-ended",
+        "Category":"Feedback",
+        "SubCategory":"Feedback",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"On a scale of  0-10, how likely are you to recommend [XX Program\/Company] to a friend or\n  family member, where 0 is not at all likely and 10 is extremely likely? (SS)",
+        "QuestionType":"Open-ended",
+        "Category":"Feedback",
+        "SubCategory":"Feedback",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"How did you change how you run\n  your business?",
+        "QuestionType":"Open-ended",
+        "Category":"Feedback",
+        "SubCategory":"Type of intervention\/attribution",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Did participating in the study\n  change how you run your business day-to-day?",
+        "QuestionType":"Open-ended",
+        "Category":"Feedback",
+        "SubCategory":"Type of intervention\/attribution",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"What caused you to close or\n  sell your business?",
+        "QuestionType":"Multiple-choice",
+        "Category":"Growth & work opportunities",
+        "SubCategory":"Closure",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Have you experienced any of\n  the following NON-BUSINESS EVENTS that affected your ability to run your\n  business in the past two weeks?",
+        "QuestionType":"Multiple-choice",
+        "Category":"Resilience",
+        "SubCategory":"Shocks",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"How much did you lose due to\n  this {0}?",
+        "QuestionType":"Numerical",
+        "Category":"Resilience",
+        "SubCategory":"Resilience outcomes",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Did you face any financial\n  loss due to {0}?",
+        "QuestionType":"Open-ended",
+        "Category":"Resilience",
+        "SubCategory":"Resilience outcomes",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Have you experienced any of\n  the following EVENTS RELATED TO YOUR BUSINESS in the past two weeks?",
+        "QuestionType":"Multiple-choice",
+        "Category":"Resilience",
+        "SubCategory":"Shocks",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Which\n  activities from the following list did you spend any time on this two weeks?",
+        "QuestionType":"Multiple-choice",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Adoption of business practices",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Which of the following do you\n  or your accountant prepare at least annually?",
+        "QuestionType":"Multiple-choice",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Financial management",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"How\n  frequently do you review the financial performance of your business and\n  analyze where there are areas for improvement?",
+        "QuestionType":"Open-ended",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Financial management",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Do you know which goods you\n  make the most profit per item in selling?",
+        "QuestionType":"Open-ended",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Financial management",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Do you keep written business\n  records?",
+        "QuestionType":"Open-ended",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Record Keeping",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"How often do you update the\n  information on inventory levels?",
+        "QuestionType":"Open-ended",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Record Keeping",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Is the system formal or\n  informal?",
+        "QuestionType":"Open-ended",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Record Keeping",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Why do you not use digital\n  technology for this purpose?",
+        "QuestionType":"Multiple-choice",
+        "Category":"Adoption of products\/services",
+        "SubCategory":"Challenges with products\/services",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"\u00a0For what purpose do you use {0}?",
+        "QuestionType":"Multiple-choice",
+        "Category":"Adoption of products\/services",
+        "SubCategory":"DFS adoption",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"\u00a0Do you use any of the following forms of\n  digital financial services?",
+        "QuestionType":"Multiple-choice",
+        "Category":"Adoption of products\/services",
+        "SubCategory":"DFS adoption",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"\u00a0Which forms of technology do you use for the\n  business?",
+        "QuestionType":"Multiple-choice",
+        "Category":"Adoption of products\/services",
+        "SubCategory":"Hardware adoption",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Are your plans for your\n  business written down?",
+        "QuestionType":"Open-ended",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Adoption of business practices",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Can you tell me about a time\n  when you did take their advice?",
+        "QuestionType":"Open-ended",
+        "Category":"Capabilities",
+        "SubCategory":"Entrepreneurial and\/or business capabilities",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Do you take their advice?",
+        "QuestionType":"Open-ended",
+        "Category":"Capabilities",
+        "SubCategory":"Entrepreneurial and\/or business capabilities",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Who do you discuss your\n  business plans with?",
+        "QuestionType":"Multiple-choice",
+        "Category":"Capabilities",
+        "SubCategory":"Entrepreneurial and\/or business capabilities",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Do you discuss your business\n  plans with other people?",
+        "QuestionType":"Open-ended",
+        "Category":"Capabilities",
+        "SubCategory":"Entrepreneurial and\/or business capabilities",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"\u00a0Why don't you save?\/Why can't you save?",
+        "QuestionType":"Open-ended",
+        "Category":"Adoption of products\/services",
+        "SubCategory":"DFS adoption",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"\u00a0Do you save for your business? (In the sense\n  of 'putting money aside for future costs and investments')",
+        "QuestionType":"Open-ended",
+        "Category":"Adoption of products\/services",
+        "SubCategory":"DFS adoption",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"\u00a0How do you compensate or pay yourself as the\n  firm owner?",
+        "QuestionType":"Multiple-choice",
+        "Category":"Growth & work opportunities",
+        "SubCategory":"Profits",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Why don't you keep your\n  financial records?",
+        "QuestionType":"Open-ended",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Record Keeping",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Why do you keep your\n  financial records in that way?",
+        "QuestionType":"Open-ended",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Record Keeping",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Do you keep financial records? If so, in which forms do you keep financial records?",
+        "QuestionType":"Multiple-choice",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Record Keeping",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"Why are you not saving or putting money away?",
+        "QuestionType":"Multiple-choice",
+        "Category":"Adoption of business practices",
+        "SubCategory":"Adoption of business practices, Challenges with products\/services",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"For what reason(s) did you borrow money\/get money?",
+        "QuestionType":"Multiple-choice",
+        "Category":"Adoption of products\/services",
+        "SubCategory":"Credit adoption",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Why have you not borrowed money?",
+        "QuestionType":"Multiple-choice",
+        "Category":"Adoption of products\/services",
+        "SubCategory":"Credit adoption",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Please tell me which of the following have you done in the past 12 months? From which bank\/institution?",
+        "QuestionType":"Multiple-choice",
+        "Category":"Adoption of products\/services",
+        "SubCategory":"Credit adoption",
+        "Recommended":"Required"
+    },
+    {
+        "Question":"There are different reasons for people not having these products. Why don\u2019t YOU have it?",
+        "QuestionType":"Multiple-choice",
+        "Category":"Adoption of products\/services",
+        "SubCategory":"Challenges with products\/services, Insurance",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"Did you understand the terms of the contract?",
+        "QuestionType":"Single choice",
+        "Category":"Adoption of products\/services",
+        "SubCategory":"Credit adoption",
+        "Recommended":"Recommended"
+    },
+    {
+        "Question":"With which institution do you have ..",
+        "QuestionType":"Matrix",
+        "Category":"Adoption of products\/services",
+        "SubCategory":"Insurance",
+        "Recommended":"Required"
+    }
+]
