@@ -159,11 +159,11 @@ document.addEventListener('DOMContentLoaded', function() {
         tbody.innerHTML = data.map(item => `
             <tr>
                 <td>${escapeHtml(item.Question)}</td>
-                <td>${escapeHtml(item.QuestionResponse)}</td>
                 <td>${escapeHtml(item.QuestionType)}</td>
                 <td>${escapeHtml(item.Category)}</td>
                 <td>${escapeHtml(item.SubCategory)}</td>
                 <td>${escapeHtml(item.Recommended)}</td>
+                <td>${escapeHtml(item.QuestionResponse)}</td>
             </tr>
         `).join('');
     }
