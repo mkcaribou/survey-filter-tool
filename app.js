@@ -22,19 +22,27 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             const arrayBuffer = await response.arrayBuffer();
             
-            // Read the Excel file
+            // Read the Excel file with all options enabled
             const workbook = XLSX.read(arrayBuffer, {
                 type: 'array',
                 cellDates: true,
                 cellStyles: true,
-                cellNF: true
+                cellNF: true,
+                cellFormula: true
             });
 
             // Get the first worksheet
             const worksheet = workbook.Sheets[workbook.SheetNames[0]];
             
-            // Convert to JSON
-            const jsonData = XLSX.utils.sheet_to_json(worksheet);
+            // Convert to JSON with specific column mapping
+            const jsonData = XLSX.utils.sheet_to_json(worksheet).map(row => ({
+                Question: row['Question'] || '',
+                QuestionType: row['Type'] || row['Type of question'] || '',
+                Category: row['Category'] || '',
+                SubCategory: row['Sub-category'] || row['Subcategory'] || '',
+                Recommended: row['Recommended'] || row['Recommended for Strive'] || '',
+                QuestionResponse: row['Response Options'] || row['Question response'] || 'N/A'
+            }));
             
             // Store and process the data
             fullData = jsonData;
@@ -54,10 +62,13 @@ document.addEventListener('DOMContentLoaded', function() {
         data.forEach(item => {
             if (item[field]) {
                 const fieldValues = item[field].toString().split(',');
-                fieldValues.forEach(value => values.add(value.trim()));
+                fieldValues.forEach(value => {
+                    const trimmedValue = value.trim();
+                    if (trimmedValue) values.add(trimmedValue);
+                });
             }
         });
-        return Array.from(values).filter(Boolean).sort();
+        return Array.from(values).sort();
     }
 
     // Setup filter dropdowns
@@ -87,6 +98,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 new Option(type, type)
             )
         );
+
+        // Setup recommended filter
+        $('#recommendedSelect').empty().append(`
+            <option value="">All</option>
+            <option value="Recommended">Recommended</option>
+            <option value="Required">Required</option>
+        `);
 
         // Refresh Select2
         $('.select2').trigger('change');
@@ -120,11 +138,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Question type filter
             const typeMatch = !selectedType || 
-                item.QuestionType === selectedType;
+                (item.QuestionType && item.QuestionType.toString().trim() === selectedType);
 
             // Recommended filter
             const recommendedMatch = !selectedRecommended || 
-                item.Recommended === selectedRecommended;
+                (item.Recommended && item.Recommended.toString().trim() === selectedRecommended);
 
             return categoryMatch && subCategoryMatch && typeMatch && recommendedMatch;
         });
@@ -140,18 +158,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
         tbody.innerHTML = data.map(item => `
             <tr>
-                <td>${escapeHtml(item.Question || '')}</td>
-                <td>${escapeHtml(item.QuestionType || '')}</td>
-                <td>${escapeHtml(item.Category || '')}</td>
-                <td>${escapeHtml(item.SubCategory || '')}</td>
-                <td>${escapeHtml(item.Recommended || '')}</td>
-                <td>${escapeHtml(item.QuestionResponse || 'N/A')}</td>
+                <td>${escapeHtml(item.Question)}</td>
+                <td>${escapeHtml(item.QuestionType)}</td>
+                <td>${escapeHtml(item.Category)}</td>
+                <td>${escapeHtml(item.SubCategory)}</td>
+                <td>${escapeHtml(item.Recommended)}</td>
+                <td>${escapeHtml(item.QuestionResponse)}</td>
             </tr>
         `).join('');
     }
 
     // Helper function to escape HTML and prevent XSS
     function escapeHtml(str) {
+        if (!str) return '';
         const div = document.createElement('div');
         div.textContent = str;
         return div.innerHTML;
