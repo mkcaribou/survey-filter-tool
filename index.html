@@ -1,4 +1,4 @@
-<!-- Full index.html file for Survey Filter Tool -->
+<!-- Updated index.html for Category/Sub-category filtering with multi-select behavior -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +35,27 @@
     <tbody></tbody>
   </table>
 
-  <!-- Include the app.js script -->
+  <script>
+    // Override getUniqueValues to handle comma-separated values
+    function getUniqueValues(data, key) {
+      const allValues = data.flatMap(item => 
+        item[key] ? item[key].split(',').map(val => val.trim()) : []
+      );
+      return [...new Set(allValues)];
+    }
+
+    // Override filterData to handle partial matches for comma-separated fields
+    function filterData(data) {
+      return data.filter(item => (
+        (!categorySelect.value || item.Category?.includes(categorySelect.value)) &&
+        (!subCategorySelect.value || item.SubCategory?.includes(subCategorySelect.value)) &&
+        (!questionTypeSelect.value || item.QuestionType === questionTypeSelect.value) &&
+        (!recommendedSelect.value || item.Recommended === recommendedSelect.value)
+      ));
+    }
+  </script>
+
+  <!-- Include the main app.js script -->
   <script src="app.js"></script>
 </body>
 </html>
