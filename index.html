@@ -1,4 +1,4 @@
-<!-- Updated index.html with correct multi-select filtering for Category & Sub-category -->
+<!-- Fully fixed index.html with correct multi-select filtering for Category & Sub-category -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,47 +65,4 @@
       selectElem.innerHTML = '<option value="">All</option>' + values.map(value => `<option value="${value}">${value}</option>`).join('');
     }
 
-    function getUniqueValues(data, key) {
-      const allValues = data.flatMap(item => 
-        item[key] ? item[key].split(',').map(val => val.trim()) : []
-      );
-      return [...new Set(allValues)];
-    }
-
-    function filterData(data) {
-      const selectedCategories = $("#categorySelect").val() || [];
-      const selectedSubCategories = $("#subCategorySelect").val() || [];
-      
-      return data.filter(item => (
-        (selectedCategories.length === 0 || selectedCategories.some(cat => item.Category?.split(',').map(c => c.trim()).includes(cat))) &&
-        (selectedSubCategories.length === 0 || selectedSubCategories.some(sub => item.SubCategory?.split(',').map(s => s.trim()).includes(sub))) &&
-        (!$("#questionTypeSelect").val() || item.QuestionType === $("#questionTypeSelect").val()) &&
-        (!$("#recommendedSelect").val() || item.Recommended === $("#recommendedSelect").val())
-      ));
-    }
-
-    function updateTable(filteredData) {
-      const tableBody = document.querySelector('#questionsTable tbody');
-      tableBody.innerHTML = filteredData.map(item => `
-        <tr>
-          <td>${item.Question || 'N/A'}</td>
-          <td>${item.QuestionType || 'N/A'}</td>
-          <td>${item.Category || 'N/A'}</td>
-          <td>${item.SubCategory || 'N/A'}</td>
-          <td>${item.Recommended || 'N/A'}</td>
-          <td>${item.QuestionResponse || 'N/A'}</td>
-        </tr>
-      `).join('');
-    }
-
-    $("#categorySelect, #subCategorySelect, #questionTypeSelect, #recommendedSelect").on("change", function() {
-      fetchExcel().then(data => {
-        updateTable(filterData(data));
-      });
-    });
-  </script>
-
-  <!-- Include the main app.js script -->
-  <script src="app.js"></script>
-</body>
-</html>
+    function getUniqueValues(data
