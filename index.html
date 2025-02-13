@@ -1,4 +1,4 @@
-<!-- Updated index.html for Category/Sub-category filtering with multi-select behavior -->
+<!-- Updated index.html with jQuery for Chosen.js -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,15 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Survey Filter Tool</title>
   <link rel="stylesheet" href="styles.css">
+  
+  <!-- Include jQuery (required for Chosen.js) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <!-- Include XLSX.js for Excel processing -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>
+  
+  <!-- Include Chosen.js for multi-select dropdowns -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css">
 </head>
 <body>
   <h1>Survey Filter Tool</h1>
   
   <!-- Filter Section -->
   <div class="filters">
-    <label>Category: <select id="categorySelect"></select></label>
-    <label>Sub-category: <select id="subCategorySelect"></select></label>
+    <label>Category: <select id="categorySelect" multiple></select></label>
+    <label>Sub-category: <select id="subCategorySelect" multiple></select></label>
     <label>Question Type: <select id="questionTypeSelect"></select></label>
     <label>Recommended for Strive: <select id="recommendedSelect"></select></label>
     <button id="clearFiltersBtn">Clear Filters</button>
@@ -36,6 +45,10 @@
   </table>
 
   <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      $("#categorySelect, #subCategorySelect").chosen();
+    });
+
     // Override getUniqueValues to handle comma-separated values
     function getUniqueValues(data, key) {
       const allValues = data.flatMap(item => 
@@ -44,11 +57,14 @@
       return [...new Set(allValues)];
     }
 
-    // Override filterData to handle partial matches for comma-separated fields
+    // Override filterData to handle multi-select filtering
     function filterData(data) {
+      const selectedCategories = Array.from(document.getElementById("categorySelect").selectedOptions).map(opt => opt.value);
+      const selectedSubCategories = Array.from(document.getElementById("subCategorySelect").selectedOptions).map(opt => opt.value);
+      
       return data.filter(item => (
-        (!categorySelect.value || item.Category?.includes(categorySelect.value)) &&
-        (!subCategorySelect.value || item.SubCategory?.includes(subCategorySelect.value)) &&
+        (selectedCategories.length === 0 || selectedCategories.some(cat => item.Category?.includes(cat))) &&
+        (selectedSubCategories.length === 0 || selectedSubCategories.some(sub => item.SubCategory?.includes(sub))) &&
         (!questionTypeSelect.value || item.QuestionType === questionTypeSelect.value) &&
         (!recommendedSelect.value || item.Recommended === recommendedSelect.value)
       ));
