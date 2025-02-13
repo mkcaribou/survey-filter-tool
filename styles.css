@@ -20,7 +20,8 @@ h1 {
     color: var(--mc-dark);
     font-size: 24px;
     font-weight: 600;
-    margin-bottom: 24px;
+    margin: 12px 0;  /* Reduced from 24px bottom margin */
+    padding: 0;      /* Ensure no extra padding */
 }
 
 /* Filters section */
