@@ -78,7 +78,7 @@ h1 {
 
 /* Clear filters button */
 .clear-filters {
-    background-color: var(--mc-red);
+    background-color: var(--mc-orange);
     color: var(--mc-white);
     border: none;
     padding: 10px 20px;
@@ -90,7 +90,7 @@ h1 {
 }
 
 .clear-filters:hover {
-    background-color: #d4001a;
+    background-color: #e65600;
 }
 
 /* Table styles */
@@ -123,7 +123,7 @@ th, td {
 }
 
 th {
-    background-color: var(--mc-dark);
+    background-color: var(--mc-orange);
     color: var(--mc-white);
     font-weight: 500;
 }
