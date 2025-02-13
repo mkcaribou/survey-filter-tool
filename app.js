@@ -1,4 +1,4 @@
-// Updated app.js to load survey questions from survey.json
+// Enhanced app.js with styling, answer options display, and Excel export functionality
 fetch('data/survey.json')
   .then(response => response.json())
   .then(data => {
@@ -9,6 +9,7 @@ fetch('data/survey.json')
     const recommendedSelect = document.getElementById('recommendedSelect');
     const tableBody = document.querySelector('#questionsTable tbody');
     const clearFiltersBtn = document.getElementById('clearFiltersBtn');
+    const exportBtn = document.getElementById('exportBtn');
 
     populateSelect(categorySelect, getUniqueValues(fullData, 'Category'));
     populateSelect(subCategorySelect, getUniqueValues(fullData, 'SubCategory'));
@@ -18,12 +19,11 @@ fetch('data/survey.json')
       .forEach(select => select.addEventListener('change', updateTable));
 
     clearFiltersBtn.addEventListener('click', () => {
-      categorySelect.value = '';
-      subCategorySelect.value = '';
-      questionTypeSelect.value = '';
-      recommendedSelect.value = '';
+      [categorySelect, subCategorySelect, questionTypeSelect, recommendedSelect].forEach(select => select.value = '');
       updateTable();
     });
+
+    exportBtn.addEventListener('click', () => exportToExcel(fullData));
 
     function updateTable() {
       const filtered = fullData.filter(item => (
@@ -36,27 +36,33 @@ fetch('data/survey.json')
     }
 
     function renderTable(data) {
-      tableBody.innerHTML = '';
-      data.forEach(item => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
+      tableBody.innerHTML = data.map(item => `
+        <tr>
           <td>${item.Question}</td>
           <td>${item.Category}</td>
           <td>${item.SubCategory}</td>
           <td>${item.QuestionType}</td>
           <td>${item.Recommended}</td>
-        `;
-        tableBody.appendChild(row);
-      });
+          <td>${item.QuestionResponse || 'N/A'}</td>
+        </tr>`).join('');
+    }
+
+    function exportToExcel(data) {
+      const csv = data.map(item =>
+        [item.Question, item.Category, item.SubCategory, item.QuestionType, item.Recommended, item.QuestionResponse || 'N/A'].join(',')
+      ).join('\n');
+      const blob = new Blob([csv], { type: 'text/csv' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'filtered_survey_questions.csv';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
     }
 
     function populateSelect(selectElem, values) {
-      values.forEach(value => {
-        const option = document.createElement('option');
-        option.value = value;
-        option.textContent = value;
-        selectElem.appendChild(option);
-      });
+      selectElem.innerHTML = '<option value="">All</option>' + values.map(value => `<option value="${value}">${value}</option>`).join('');
     }
 
     function getUniqueValues(data, key) {
