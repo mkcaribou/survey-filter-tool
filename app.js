@@ -195,6 +195,33 @@ document.addEventListener('DOMContentLoaded', function() {
         renderTable(fullData);
     });
 
+    // Export to Excel functionality
+    document.getElementById('exportBtn').addEventListener('click', () => {
+        const filteredData = filterData();
+        
+        // Create a new workbook
+        const wb = XLSX.utils.book_new();
+        
+        // Convert the filtered data to the format we want to export
+        const exportData = filteredData.map(item => ({
+            'Question': item.Question,
+            'Response options': item.QuestionResponse,
+            'Type': item.QuestionType,
+            'Category': item.Category,
+            'Sub-category': item.SubCategory,
+            'Required/recommended': item.Recommended
+        }));
+        
+        // Create a worksheet
+        const ws = XLSX.utils.json_to_sheet(exportData);
+        
+        // Add the worksheet to the workbook
+        XLSX.utils.book_append_sheet(wb, ws, "Filtered Questions");
+        
+        // Generate the file and trigger download
+        XLSX.writeFile(wb, "survey_questions_export.xlsx");
+    });
+
     // Initial load
     loadExcelFile();
 });
