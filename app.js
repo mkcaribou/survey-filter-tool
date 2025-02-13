@@ -1,4 +1,4 @@
-// app.js
+// Updated app.js to load survey questions from survey.json
 fetch('data/survey.json')
   .then(response => response.json())
   .then(data => {
@@ -10,7 +10,6 @@ fetch('data/survey.json')
     const tableBody = document.querySelector('#questionsTable tbody');
     const clearFiltersBtn = document.getElementById('clearFiltersBtn');
 
-    // Populate filters
     populateSelect(categorySelect, getUniqueValues(fullData, 'Category'));
     populateSelect(subCategorySelect, getUniqueValues(fullData, 'SubCategory'));
     populateSelect(questionTypeSelect, getUniqueValues(fullData, 'QuestionType'));
@@ -64,5 +63,5 @@ fetch('data/survey.json')
       return [...new Set(data.map(item => item[key]).filter(Boolean))];
     }
 
-    updateTable(); // Initial table render
+    updateTable();
   });
