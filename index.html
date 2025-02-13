@@ -1,4 +1,4 @@
-<!-- Updated index.html with Select2 for proper multi-select dropdowns -->
+<!-- Updated index.html with better layout and formatting for filters -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,12 +20,16 @@
 <body>
   <h1>Survey Filter Tool</h1>
   
-  <!-- Filter Section -->
+  <!-- Filter Section with Improved Layout -->
   <div class="filters">
-    <label>Category: <select id="categorySelect" multiple></select></label>
-    <label>Sub-category: <select id="subCategorySelect" multiple></select></label>
-    <label>Question Type: <select id="questionTypeSelect"></select></label>
-    <label>Recommended for Strive: <select id="recommendedSelect"></select></label>
+    <div class="filter-row">
+      <label>Category: <select id="categorySelect" multiple></select></label>
+      <label>Sub-category: <select id="subCategorySelect" multiple></select></label>
+    </div>
+    <div class="filter-row">
+      <label>Question Type: <select id="questionTypeSelect"></select></label>
+      <label>Recommended for Strive: <select id="recommendedSelect"></select></label>
+    </div>
     <button id="clearFiltersBtn">Clear Filters</button>
   </div>
 
@@ -49,7 +53,11 @@
       $("#categorySelect, #subCategorySelect").select2({
         placeholder: "Select options",
         allowClear: true,
-        width: 'resolve'
+        width: '100%'
+      });
+      $("#questionTypeSelect, #recommendedSelect").select2({
+        minimumResultsForSearch: -1,
+        width: '100%'
       });
     });
 
