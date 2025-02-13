@@ -34,7 +34,7 @@ function setupFilters(data) {
   populateSelect(categorySelect, getUniqueValues(data, 'Category'));
   populateSelect(subCategorySelect, getUniqueValues(data, 'SubCategory'));
   populateSelect(questionTypeSelect, getUniqueValues(data, 'QuestionType'));
-  recommendedSelect.innerHTML = '<option value="">All</option><option value="Yes">Yes</option><option value="No">No</option>';
+  recommendedSelect.innerHTML = '<option value="">All</option><option value="Recommended">Recommended</option><option value="Required">Required</option>';
   
   [categorySelect, subCategorySelect, questionTypeSelect, recommendedSelect]
     .forEach(select => select.addEventListener('change', () => renderTable(filterData(data))));

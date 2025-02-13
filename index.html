@@ -1,4 +1,4 @@
-<!-- Updated index.html with better layout and formatting for filters -->
+<!-- Updated index.html with correct filtering for multi-select Category & Sub-category -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,7 +61,10 @@
       });
     });
 
-    // Override getUniqueValues to handle comma-separated values
+    function populateSelect(selectElem, values) {
+      selectElem.innerHTML = '<option value="">All</option>' + values.map(value => `<option value="${value}">${value}</option>`).join('');
+    }
+
     function getUniqueValues(data, key) {
       const allValues = data.flatMap(item => 
         item[key] ? item[key].split(',').map(val => val.trim()) : []
@@ -69,18 +72,37 @@
       return [...new Set(allValues)];
     }
 
-    // Override filterData to handle multi-select filtering
     function filterData(data) {
       const selectedCategories = $("#categorySelect").val() || [];
       const selectedSubCategories = $("#subCategorySelect").val() || [];
       
       return data.filter(item => (
-        (selectedCategories.length === 0 || selectedCategories.some(cat => item.Category?.includes(cat))) &&
-        (selectedSubCategories.length === 0 || selectedSubCategories.some(sub => item.SubCategory?.includes(sub))) &&
-        (!questionTypeSelect.value || item.QuestionType === questionTypeSelect.value) &&
-        (!recommendedSelect.value || item.Recommended === recommendedSelect.value)
+        (selectedCategories.length === 0 || selectedCategories.some(cat => item.Category?.split(',').map(c => c.trim()).includes(cat))) &&
+        (selectedSubCategories.length === 0 || selectedSubCategories.some(sub => item.SubCategory?.split(',').map(s => s.trim()).includes(sub))) &&
+        (!$("#questionTypeSelect").val() || item.QuestionType === $("#questionTypeSelect").val()) &&
+        (!$("#recommendedSelect").val() || item.Recommended === $("#recommendedSelect").val())
       ));
     }
+
+    function updateTable(filteredData) {
+      const tableBody = document.querySelector('#questionsTable tbody');
+      tableBody.innerHTML = filteredData.map(item => `
+        <tr>
+          <td>${item.Question}</td>
+          <td>${item.QuestionType}</td>
+          <td>${item.Category}</td>
+          <td>${item.SubCategory}</td>
+          <td>${item.Recommended}</td>
+          <td>${item.QuestionResponse}</td>
+        </tr>
+      `).join('');
+    }
+
+    $("#categorySelect, #subCategorySelect, #questionTypeSelect, #recommendedSelect").on("change", function() {
+      fetchExcel().then(data => {
+        updateTable(filterData(data));
+      });
+    });
   </script>
 
   <!-- Include the main app.js script -->
