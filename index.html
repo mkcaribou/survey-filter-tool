@@ -1,41 +1,22 @@
-<!-- index.html -->
+<!-- Full index.html file for Survey Filter Tool -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Survey Filter Tool</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>
 </head>
 <body>
-  <h1>Survey Question Filter Tool</h1>
+  <h1>Survey Filter Tool</h1>
   
-  <!-- Filters Section -->
+  <!-- Filter Section -->
   <div class="filters">
-    <label>Category:
-      <select id="categorySelect">
-        <option value="">All</option>
-      </select>
-    </label>
-
-    <label>Sub-category:
-      <select id="subCategorySelect">
-        <option value="">All</option>
-      </select>
-    </label>
-
-    <label>Question Type:
-      <select id="questionTypeSelect">
-        <option value="">All</option>
-      </select>
-    </label>
-
-    <label>Recommended for Strive:
-      <select id="recommendedSelect">
-        <option value="">All</option>
-        <option value="Yes">Yes</option>
-        <option value="No">No</option>
-      </select>
-    </label>
-
+    <label>Category: <select id="categorySelect"></select></label>
+    <label>Sub-category: <select id="subCategorySelect"></select></label>
+    <label>Question Type: <select id="questionTypeSelect"></select></label>
+    <label>Recommended for Strive: <select id="recommendedSelect"></select></label>
     <button id="clearFiltersBtn">Clear Filters</button>
   </div>
 
@@ -44,15 +25,17 @@
     <thead>
       <tr>
         <th>Question</th>
+        <th>Type</th>
         <th>Category</th>
         <th>Sub-category</th>
-        <th>Type</th>
-        <th>Recommended?</th>
+        <th>Recommended</th>
+        <th>Response Options</th>
       </tr>
     </thead>
     <tbody></tbody>
   </table>
 
+  <!-- Include the app.js script -->
   <script src="app.js"></script>
 </body>
 </html>
