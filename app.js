@@ -3,12 +3,14 @@ document.addEventListener('DOMContentLoaded', function() {
     $('#categorySelect, #subCategorySelect').select2({
         placeholder: 'Select options',
         allowClear: true,
-        width: '100%'
+        width: '100%',
+        closeOnSelect: false
     });
 
     $('#questionTypeSelect, #recommendedSelect').select2({
         minimumResultsForSearch: -1,
-        width: '100%'
+        width: '100%',
+        closeOnSelect: false
     });
 
     let fullData = []; // Store the complete dataset
