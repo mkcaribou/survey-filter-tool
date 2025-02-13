@@ -1,4 +1,4 @@
-<!-- Updated index.html with jQuery for Chosen.js -->
+<!-- Updated index.html with Select2 for proper multi-select dropdowns -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,15 +7,15 @@
   <title>Survey Filter Tool</title>
   <link rel="stylesheet" href="styles.css">
   
-  <!-- Include jQuery (required for Chosen.js) -->
+  <!-- Include jQuery (required for Select2) -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   
   <!-- Include XLSX.js for Excel processing -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>
   
-  <!-- Include Chosen.js for multi-select dropdowns -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css">
+  <!-- Include Select2 for multi-select dropdowns -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
 </head>
 <body>
   <h1>Survey Filter Tool</h1>
@@ -46,7 +46,11 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      $("#categorySelect, #subCategorySelect").chosen();
+      $("#categorySelect, #subCategorySelect").select2({
+        placeholder: "Select options",
+        allowClear: true,
+        width: 'resolve'
+      });
     });
 
     // Override getUniqueValues to handle comma-separated values
@@ -59,8 +63,8 @@
 
     // Override filterData to handle multi-select filtering
     function filterData(data) {
-      const selectedCategories = Array.from(document.getElementById("categorySelect").selectedOptions).map(opt => opt.value);
-      const selectedSubCategories = Array.from(document.getElementById("subCategorySelect").selectedOptions).map(opt => opt.value);
+      const selectedCategories = $("#categorySelect").val() || [];
+      const selectedSubCategories = $("#subCategorySelect").val() || [];
       
       return data.filter(item => (
         (selectedCategories.length === 0 || selectedCategories.some(cat => item.Category?.includes(cat))) &&
