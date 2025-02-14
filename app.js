@@ -150,6 +150,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Helper function to format response options with line breaks
+    function formatResponseOptions(str) {
+        if (!str) return '';
+        const lines = str.split('-').map(line => line.trim()).filter(line => line);
+        if (lines.length <= 1) return escapeHtml(str);
+        return lines.map(line => `- ${escapeHtml(line)}`).join('<br>');
+    }
+
+    // Helper function to escape HTML and prevent XSS
+    function escapeHtml(str) {
+        if (!str) return '';
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+
     // Render the table with filtered data
     function renderTable(data) {
         const tbody = document.querySelector('#questionsTable tbody');
@@ -161,21 +177,13 @@ document.addEventListener('DOMContentLoaded', function() {
         tbody.innerHTML = data.map(item => `
             <tr>
                 <td>${escapeHtml(item.Question)}</td>
-                <td>${escapeHtml(item.QuestionResponse)}</td>
+                <td>${formatResponseOptions(item.QuestionResponse)}</td>
                 <td>${escapeHtml(item.QuestionType)}</td>
                 <td>${escapeHtml(item.Category)}</td>
                 <td>${escapeHtml(item.SubCategory)}</td>
                 <td>${escapeHtml(item.Recommended)}</td>
             </tr>
         `).join('');
-    }
-
-    // Helper function to escape HTML and prevent XSS
-    function escapeHtml(str) {
-        if (!str) return '';
-        const div = document.createElement('div');
-        div.textContent = str;
-        return div.innerHTML;
     }
 
     // Event listeners for filters
