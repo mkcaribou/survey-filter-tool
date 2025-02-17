@@ -1,16 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize Select2
-    $('#categorySelect, #subCategorySelect').select2({
+    $('#categorySelect, #subCategorySelect, #questionTypeSelect').select2({
         placeholder: 'Select options',
         allowClear: true,
         width: '100%',
         closeOnSelect: false
     });
 
-    $('#questionTypeSelect, #recommendedSelect').select2({
+    $('#recommendedSelect').select2({
         minimumResultsForSearch: -1,
-        width: '100%',
-        closeOnSelect: false
+        width: '100%'
     });
 
     let fullData = []; // Store the complete dataset
@@ -94,8 +93,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Setup question type filter
         const questionTypes = getUniqueValues(data, 'QuestionType');
         $('#questionTypeSelect').empty().append(
-            '<option value="">All types</option>'
-        ).append(
             questionTypes.map(type => 
                 new Option(type, type)
             )
@@ -116,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function filterData() {
         const selectedCategories = $('#categorySelect').val() || [];
         const selectedSubCategories = $('#subCategorySelect').val() || [];
-        const selectedType = $('#questionTypeSelect').val();
+        const selectedTypes = $('#questionTypeSelect').val() || [];
         const selectedRecommended = $('#recommendedSelect').val();
 
         return fullData.filter(item => {
@@ -139,8 +136,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 );
 
             // Question type filter
-            const typeMatch = !selectedType || 
-                (item.QuestionType && item.QuestionType.toString().trim() === selectedType);
+            const typeMatch = selectedTypes.length === 0 || 
+                selectedTypes.some(type => 
+                    item.QuestionType && item.QuestionType.toString().trim() === type
+                );
 
             // Recommended filter
             const recommendedMatch = !selectedRecommended || 
@@ -198,8 +197,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Clear filters button
     document.getElementById('clearFiltersBtn').addEventListener('click', () => {
         // Clear all select2 dropdowns
-        $('#categorySelect, #subCategorySelect').val(null).trigger('change');
-        $('#questionTypeSelect, #recommendedSelect').val('').trigger('change');
+        $('#categorySelect, #subCategorySelect, #questionTypeSelect').val(null).trigger('change');
+        $('#recommendedSelect').val('').trigger('change');
         
         // Reset table to show all data
         renderTable(fullData);
