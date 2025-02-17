@@ -285,3 +285,15 @@ td .number-indicator {
     margin-bottom: 16px;
     color: var(--mc-dark);
 }
+
+.grouped-question {
+    background-color: #f8f9fa;
+}
+
+.group-start {
+    border-top: 2px solid #dee2e6;
+}
+
+.grouped-question td {
+    padding-left: 1.5rem;
+}

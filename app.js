@@ -42,11 +42,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 QuestionType: row['Type'] || row['Type of question'] || '',
                 Category: row['Category'] || '',
                 SubCategory: row['Sub-category'] || row['Subcategory'] || '',
-                Recommended: row['Recommended'] || row['Recommended for Strive'] || ''
+                Recommended: row['Recommended'] || row['Recommended for Strive'] || '',
+                GroupID: row['GroupID'] || '',
+                Sequence: row['Sequence'] || 0
             }));
             
             // Store and process the data
-            fullData = jsonData;
+            fullData = sortQuestions(jsonData);
             setupFilters(jsonData);
             renderTable(jsonData);
             
@@ -55,6 +57,26 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('#questionsTable tbody').innerHTML = 
                 '<tr><td colspan="6">Error loading data. Please check console for details.</td></tr>';
         }
+    }
+
+    // Sort questions by GroupID, Sequence, and Category
+    function sortQuestions(data) {
+        return [...data].sort((a, b) => {
+            // If both items have GroupIDs
+            if (a.GroupID && b.GroupID) {
+                // If they're in the same group, sort by sequence
+                if (a.GroupID === b.GroupID) {
+                    return a.Sequence - b.Sequence;
+                }
+                // Different groups, sort by GroupID
+                return a.GroupID.localeCompare(b.GroupID);
+            }
+            // If only one has GroupID, grouped items come first
+            if (a.GroupID) return -1;
+            if (b.GroupID) return 1;
+            // Neither has GroupID, sort by Category
+            return a.Category.localeCompare(b.Category);
+        });
     }
 
     // Get unique values for a field, handling comma-separated values
@@ -173,16 +195,22 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        tbody.innerHTML = data.map(item => `
-            <tr>
-                <td>${escapeHtml(item.Question)}</td>
-                <td>${formatResponseOptions(item.QuestionResponse)}</td>
-                <td>${escapeHtml(item.QuestionType)}</td>
-                <td>${escapeHtml(item.Category)}</td>
-                <td>${escapeHtml(item.SubCategory)}</td>
-                <td>${escapeHtml(item.Recommended)}</td>
-            </tr>
-        `).join('');
+        let currentGroup = '';
+        tbody.innerHTML = sortQuestions(data).map(item => {
+            const isNewGroup = item.GroupID && item.GroupID !== currentGroup;
+            currentGroup = item.GroupID;
+            
+            return `
+                <tr class="${item.GroupID ? 'grouped-question' : ''} ${isNewGroup ? 'group-start' : ''}">
+                    <td>${escapeHtml(item.Question)}</td>
+                    <td>${formatResponseOptions(item.QuestionResponse)}</td>
+                    <td>${escapeHtml(item.QuestionType)}</td>
+                    <td>${escapeHtml(item.Category)}</td>
+                    <td>${escapeHtml(item.SubCategory)}</td>
+                    <td>${escapeHtml(item.Recommended)}</td>
+                </tr>
+            `;
+        }).join('');
     }
 
     // Event listeners for filters
@@ -218,7 +246,9 @@ document.addEventListener('DOMContentLoaded', function() {
             'Type': item.QuestionType,
             'Category': item.Category,
             'Sub-category': item.SubCategory,
-            'Required/recommended': item.Recommended
+            'Required/recommended': item.Recommended,
+            'GroupID': item.GroupID,
+            'Sequence': item.Sequence
         }));
         
         // Create a worksheet
